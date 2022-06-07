@@ -1,0 +1,39 @@
+.experience-container {
+
+  background: url('https://www.headwire.com/content/headwire/assets/site/background-pattern.webp');
+}
+
+.experience-container.section {
+  padding: 100px 20px 50px;
+}
+
+.experience > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  color: #777;
+}
+
+.experience img {
+  width: 100%;
+
+}
+
+.experience h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.experience p  {
+
+  font-size: 16px;
+
+}
+
+@media (max-width: 767.98px) {
+  .experience picture {
+    display: none;
+  }
+}

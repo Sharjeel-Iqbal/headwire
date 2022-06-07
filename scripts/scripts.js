@@ -629,8 +629,8 @@ window.addEventListener('load', () => sampleRUM('load'));
 document.addEventListener('click', () => sampleRUM('click'));
 
 loadPage(document);
-
 function buildHeroBlock(main) {
+  console.log(main);
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise

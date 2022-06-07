@@ -1,14 +1,10 @@
-footer {
-  padding: 2rem;
-  background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
-}
 
-footer .footer {
-  max-width: 768px;
-  margin: auto;
-}
 
-footer .footer p {
-  margin: 0;
+.footer.section {
+  padding: 20px 20px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  background: 50% 50% / cover no-repeat rgb(34, 34, 34);
+  color: #fff;
+  text-align: center;
 }

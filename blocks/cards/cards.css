@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .section.cards-container {
   background: 50% 50% / cover no-repeat rgb(54, 90, 139);
   padding: 40px 20px;

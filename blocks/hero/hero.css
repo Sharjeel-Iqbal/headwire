@@ -7,10 +7,10 @@
 
 main .hero-container > div {
     max-width: unset;
-    background-image: url('https://www.headwire.com/content/headwire/assets/site/heading-image.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url('https://www.headwire.com/content/headwire/assets/site/heading-image.webp') 0% 100% / cover no-repeat;
     font-family: 'Raleway', sans-serif;
+    padding: 138px 20px 181px;
+
 }
 
 main .hero-container {
@@ -23,7 +23,6 @@ main .hero-container {
 
 main .hero {
     position: relative;
-    padding: 2rem;
     min-height: 300px;
     display: flex;
     justify-content: center;
@@ -52,7 +51,7 @@ main .hero-block > div > div {
 
 @media (max-width: 767.98px) {
 
-    main .hero {
+    main .hero-wrapper {
         padding: 315px 20px 240px;
     }
     .hero img {
