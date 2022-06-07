@@ -9,6 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
 
  :root {
   /* colors */
@@ -63,17 +64,9 @@ h1, h2, h3,
 h4, h5, h6 {
   font-weight: 600;
   line-height: 1.25;
-  margin-top: 1em;
   margin-bottom: .5em;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
-
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
-h6 { font-size: var(--heading-font-size-xs) }
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
@@ -105,41 +98,8 @@ pre {
 
 /* buttons */
 
-a.button:any-link, button {
-  font-family: var(--font-family-body);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal; 
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
-}
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
 
-button:disabled, button:disabled:hover {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
-} 
 
 
 main input {
@@ -148,7 +108,7 @@ main input {
   max-width: 50rem;
   display: block;
   margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;    
+  padding: 0.75rem 0.6rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
   border: 1px solid var(--text-color);
@@ -208,21 +168,14 @@ main img {
     --heading-font-size-l: 36px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;  
+    --heading-font-size-xs: 22px;
   }
-  
-  .section > div {
-    max-width: 800px;
-    margin: auto;
-  }
+
+
 }
 
 /* progressive section appearance */
 main .section[data-section-status='loading'],
 main .section[data-section-status='initialized'] {
   display: none;
-}
-
-main .section.highlight {
-  background-color: var(--highlight-background-color);
 }

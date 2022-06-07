@@ -1,40 +1,65 @@
 /* block specific CSS goes here */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 main .hero-container > div {
     max-width: unset;
+    background-image: url('https://www.headwire.com/content/headwire/assets/site/heading-image.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
 }
-  
+
 main .hero-container {
     padding: 0;
 }
-  
+
+.hero div div {
+    display: flex;
+}
+
 main .hero {
     position: relative;
     padding: 2rem;
     min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main .hero h1 {
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
     color: white;
+    font-weight: normal;
 }
-
 
 main .hero picture {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    object-fit: cover;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+
 }
 
-main .hero img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+main .hero-block > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (max-width: 767.98px) {
+
+    main .hero {
+        padding: 315px 20px 240px;
+    }
+    .hero img {
+        width: 75px;
+
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
 }
