@@ -21,6 +21,10 @@
 
 }
 
+.experience > div > div {
+  margin-right: 2rem;
+}
+
 .experience h2 {
   font-size: 36px;
   font-weight: 400;

@@ -17,9 +17,18 @@ main .hero-container {
     padding: 0;
 }
 
-.hero div div {
+.hero > div > div {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 }
+
+
+.hero > div > div p {
+    margin: 0;
+}
+
 
 main .hero {
     position: relative;
@@ -29,7 +38,8 @@ main .hero {
     align-items: center;
 }
 
-main .hero h1 {
+main .hero h1,
+.hero div  {
     color: white;
     font-weight: normal;
 }
@@ -42,12 +52,7 @@ main .hero picture {
 
 }
 
-main .hero-block > div > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
 @media (max-width: 767.98px) {
 

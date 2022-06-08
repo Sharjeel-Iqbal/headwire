@@ -629,24 +629,23 @@ window.addEventListener('load', () => sampleRUM('load'));
 document.addEventListener('click', () => sampleRUM('click'));
 
 loadPage(document);
-function buildHeroBlock(main) {
-  console.log(main);
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture) {
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
-  }
-}
+// function buildHeroBlock(main) {
+//   const h1 = main.querySelector('h1');
+//   const picture = main.querySelector('picture');
+//   // eslint-disable-next-line no-bitwise
+//   if (h1 && picture) {
+//     const section = document.createElement('div');
+//     section.append(buildBlock('hero', { elems: [picture, h1] }));
+//     main.prepend(section);
+//   }
+// }
 
-function loadHeader(header) {
-  const headerBlock = buildBlock('header', '');
-  header.append(headerBlock);
-  decorateBlock(headerBlock);
-  loadBlock(headerBlock);
-}
+// function loadHeader(header) {
+//   const headerBlock = buildBlock('header', '');
+//   header.append(headerBlock);
+//   decorateBlock(headerBlock);
+//   loadBlock(headerBlock);
+// }
 
 function loadFooter(footer) {
   const footerBlock = buildBlock('footer', '');
@@ -659,14 +658,14 @@ function loadFooter(footer) {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks(main) {
-  try {
-    buildHeroBlock(main);
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
-  }
-}
+// function buildAutoBlocks(main) {
+//   try {
+//     buildHeroBlock(main);
+//   } catch (error) {
+//     // eslint-disable-next-line no-console
+//     console.error('Auto Blocking failed', error);
+//   }
+// }
 
 /**
  * Decorates the main element.
@@ -681,7 +680,7 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
-  buildAutoBlocks(main);
+  // buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
 }
@@ -709,7 +708,7 @@ async function loadLazy(doc) {
   const element = hash ? main.querySelector(hash) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
+  // loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
