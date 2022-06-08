@@ -24,8 +24,9 @@
 
 }
 
-.cards > div > div:nth-child(2) {
-  padding: 24px;
+.cards > div > div {
+ width: 100%;
+ padding: 20px;
 }
 
 
@@ -62,7 +63,7 @@
 }
 
 .cards  picture  img {
-  width: 100%;
+  width: 30%;
 }
 
 .cards-container.highlight .cards picture img {
