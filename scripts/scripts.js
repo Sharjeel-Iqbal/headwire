@@ -640,12 +640,12 @@ loadPage(document);
 //   }
 // }
 
-// function loadHeader(header) {
-//   const headerBlock = buildBlock('header', '');
-//   header.append(headerBlock);
-//   decorateBlock(headerBlock);
-//   loadBlock(headerBlock);
-// }
+function loadHeader(header) {
+  const headerBlock = buildBlock('header', '');
+  header.append(headerBlock);
+  decorateBlock(headerBlock);
+  loadBlock(headerBlock);
+}
 
 function loadFooter(footer) {
   const footerBlock = buildBlock('footer', '');
@@ -708,7 +708,7 @@ async function loadLazy(doc) {
   const element = hash ? main.querySelector(hash) : false;
   if (hash && element) element.scrollIntoView();
 
-  // loadHeader(doc.querySelector('header'));
+  loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
