@@ -10,7 +10,7 @@
     "lint:css": "stylelint 'blocks/**/*.css' 'styles/*.css'",
     "lint": "npm run lint:js && npm run lint:css",
     "build:watch": "postcss ./styles/index.css -o ./dist/index.css -w",
-    "build": "postcss ./styles/index.css -o ./dist/index.css"
+    "build": "parcel build styles/index.css"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,9 @@
     "eslint": "8.16.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.26.0",
+    "parcel": "^2.6.0",
     "postcss": "^8.4.14",
+    "postcss-import": "^14.1.0",
     "sinon": "14.0.0",
     "stylelint": "14.8.3",
     "stylelint-config-prettier": "9.0.3",
@@ -44,7 +46,6 @@
     "cssnano": "^5.1.11",
     "postcss-cli": "^9.1.0",
     "postcss-custom-properties": "^12.1.7",
-    "postcss-import": "^14.1.0",
     "postcss-url": "^10.1.3"
   }
 }
