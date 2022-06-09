@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
 @import './tailwind.css';
 
 @import './lazy-styles.css';
@@ -7,5 +7,9 @@
 
 @import '../blocks/blog/blog.css';
 @import '../blocks/cards/cards.css';
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
+@import '../blocks/example/example.css';
+@import '../blocks/experience/experience.css';
+@import '../blocks/hero/hero.css';
+@import '../blocks/footer/footer.css';
+@import '../blocks/title/title.css';
+@import '../blocks/header/header.css';

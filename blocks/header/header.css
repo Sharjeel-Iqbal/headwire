@@ -25,7 +25,11 @@ header {
 
 .header  div {
   height: 100%;
+  display: flex;
 }
+
+/* .header > div:nth-child(2) {
+} */
 
 
 .header img {
@@ -81,5 +85,5 @@ header {
 
 .header a:hover {
   text-decoration: none;
-  color: color: rgb(54, 90, 139);
+  color: rgb(54, 90, 139);
 }

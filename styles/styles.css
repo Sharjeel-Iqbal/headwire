@@ -3,6 +3,10 @@ main {
 
  }
 
+ *:empty:not(img) {
+   @apply inline w-0 h-0;
+ }
+
 
  :root {
   /* colors */

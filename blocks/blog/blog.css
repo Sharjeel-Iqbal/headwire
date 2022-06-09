@@ -1,36 +1,19 @@
-body {
-  background: white;
-  @apply bg-black;
-}
-
 .blog > div {
-
-  display: flex;
-  align-items: center;
-
+  @apply flex items-center;
 }
 
 .blog {
-  font-family: 'Raleway', sans-serif;
-  color: black;
+  @apply font-raleway text-black;
 }
 
 .button {
-  padding: 8px;
-  border-radius: 16px;
-  border: 2px rgb(54, 90, 139) solid;
-  color: rgb(54, 90, 139) !important;
-  background-color: transparent;
+  @apply p-2 rounded-2xl border-2 border-cyan-400 border-solid text-cyan-400 bg-transparent;
 }
 
 .blog-wrapper {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 20%);
+  @apply bg-white p-5 rounded-md overflow-hidden shadow shadow-slate-600;
 }
 
 .blog > div p {
-  font-size: 16px;
+  @apply text-base;
 }
