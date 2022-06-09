@@ -10,7 +10,8 @@
     "lint:css": "stylelint 'blocks/**/*.css' 'styles/*.css'",
     "lint": "npm run lint:js && npm run lint:css",
     "build:watch": "postcss ./styles/index.css -o ./dist/index.css -w",
-    "build": "parcel build styles/index.css"
+    "build": "parcel build styles/index.css",
+    "watch":  "parcel watch styles/index.css"
   },
   "repository": {
     "type": "git",
@@ -33,19 +34,27 @@
     "eslint": "8.16.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.26.0",
-    "parcel": "^2.6.0",
-    "postcss": "^8.4.14",
-    "postcss-import": "^14.1.0",
+    "parcel": "^2.0.1",
+    "parcel-namer-rewrite": "^2.0.0-rc.1",
+    "postcss": "^8.4.4",
+    "postcss-custom-properties": "^12.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-url": "^10.1.3",
+    "cssnano": "^5.0.12",
     "sinon": "14.0.0",
     "stylelint": "14.8.3",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard": "25.0.0",
     "tailwindcss": "^3.0.24"
   },
-  "dependencies": {
-    "cssnano": "^5.1.11",
-    "postcss-cli": "^9.1.0",
-    "postcss-custom-properties": "^12.1.7",
-    "postcss-url": "^10.1.3"
-  }
+  "parcel-namer-rewrite": {
+    "chain": "@parcel/namer-default",
+    "rules": {
+      "(.*?)(\\.[a-f0-9]{8})?\\.(ttf|woff2?)": "resources/fonts/$1.$3",
+      "(.*?)(\\.[a-f0-9]{8})?\\.(svg|png|gif|jpg|jpeg|webp)": "resources/images/$1.$3",
+      "(.*?)(\\.[a-f0-9]{8})?\\.(tsx|js|ts)": "js/$1.$3",
+      "(.*?)(\\.[a-f0-9]{8})?\\.(css|scss|less)": "css/$1.$3"
+    }
+  },
+  "dependencies": {}
 }
