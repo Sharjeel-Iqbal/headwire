@@ -1,18 +1,13 @@
 .experience-container {
-
-  background: url('https://www.headwire.com/content/headwire/assets/site/background-pattern.webp');
+  background: url("https://www.headwire.com/content/headwire/assets/site/background-pattern.webp");
 }
 
 .experience-container.section {
-  padding: 100px 20px 50px;
+  @apply pb-50 pt-100 px-5;
 }
 
 .experience > div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Raleway', sans-serif;
+  @apply w-full flex justify-center items-center font-raleway;
   color: #777;
 }
 

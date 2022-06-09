@@ -70,6 +70,7 @@ export function sampleRUM(checkpoint, data = {}) {
  * @param {string} href The path to the CSS file
  */
 export function loadCSS(href, callback) {
+  console.log(href);
   if (!document.querySelector(`head > link[href="${href}"]`)) {
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
@@ -357,9 +358,6 @@ export async function loadBlock(block, eager = false) {
     block.setAttribute('data-block-status', 'loading');
     const blockName = block.getAttribute('data-block-name');
     try {
-      const cssLoaded = new Promise((resolve) => {
-        // loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`, resolve);
-      });
       const decorationComplete = new Promise((resolve) => {
         (async () => {
           try {
@@ -374,7 +372,7 @@ export async function loadBlock(block, eager = false) {
           resolve();
         })();
       });
-      await Promise.all([cssLoaded, decorationComplete]);
+      await Promise.all([decorationComplete]);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(`failed to load block ${blockName}`, err);
@@ -629,16 +627,6 @@ window.addEventListener('load', () => sampleRUM('load'));
 document.addEventListener('click', () => sampleRUM('click'));
 
 loadPage(document);
-// function buildHeroBlock(main) {
-//   const h1 = main.querySelector('h1');
-//   const picture = main.querySelector('picture');
-//   // eslint-disable-next-line no-bitwise
-//   if (h1 && picture) {
-//     const section = document.createElement('div');
-//     section.append(buildBlock('hero', { elems: [picture, h1] }));
-//     main.prepend(section);
-//   }
-// }
 
 function loadHeader(header) {
   const headerBlock = buildBlock('header', '');
@@ -655,19 +643,6 @@ function loadFooter(footer) {
 }
 
 /**
- * Builds all synthetic blocks in a container element.
- * @param {Element} main The container element
- */
-// function buildAutoBlocks(main) {
-//   try {
-//     buildHeroBlock(main);
-//   } catch (error) {
-//     // eslint-disable-next-line no-console
-//     console.error('Auto Blocking failed', error);
-//   }
-// }
-
-/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -680,7 +655,6 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
-  // buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
 }
@@ -711,7 +685,7 @@ async function loadLazy(doc) {
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
-  // loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
+  loadCSS(`${window.hlx.codeBasePath}/dist/css/index.css`);
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
 }
 
