@@ -11,6 +11,10 @@
   @apply flex flex-col items-center w-4/12 py-5 text-white font-raleway;
 }
 
+.cards div {
+  @apply phone:w-full;
+}
+
 .cards > div > div {
   @apply w-full p-5;
 }
@@ -23,15 +27,13 @@
 
 
 .cards {
-  @apply flex text-center justify-evenly;
+  @apply flex text-center justify-evenly phone:flex-col;
 
 }
 
 .cards {
   @apply max-w-[970px];
 }
-
-
 
 .cards h2 {
   @apply text-3xl font-light mt-0;
@@ -47,27 +49,13 @@
 
 .cards  picture  img {
   @apply w-30;
+
 }
 
 .cards-container.highlight .cards picture img {
-  @apply w-30;
+  @apply w-30 phone:w-full;
 }
 
-@media (max-width: 767.98px) {
-  .cards  div {
-    width: 100%;
-
-  }
-  .cards > div:not(:last-child) {
-    border-bottom: 1px solid hsla(0,0%,100%,.25)
-  }
-
-  .cards-container.highlight .cards picture img {
-    width: 100px;
-  }
-
-  .cards {
-    flex-direction: column;
-  }
-
+.cards > div:not(:last-child) {
+  @apply border-b border-solid border-[hsla(0,0%,100%,.25)]
 }

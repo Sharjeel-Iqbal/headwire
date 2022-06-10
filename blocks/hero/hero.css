@@ -1,63 +1,46 @@
 /* block specific CSS goes here */
 main .hero-container > div {
-    max-width: unset;
+    @apply max-w-[unset] font-raleway pt-[138px] px-5 pb-[181px];
     background: url('https://www.headwire.com/content/headwire/assets/site/heading-image.webp') 0% 100% / cover no-repeat;
-    font-family: 'Raleway', sans-serif;
-    padding: 138px 20px 181px;
-
 }
 
 main .hero-container {
-    padding: 0;
+    @apply p-0;
 }
 
 .hero > div > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
+    @apply flex-center m-4;
 }
-
 
 .hero > div > div p {
-    margin: 0;
+    @apply m-0;
 }
 
-
 main .hero {
-    position: relative;
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @apply relative min-h-[300px] flex-center;
 }
 
 main .hero h1,
 .hero div  {
-    color: white;
-    font-weight: normal;
+    @apply text-[white] font-normal;
+}
+
+main .hero h1 {
+    @apply m-0;
 }
 
 main .hero picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1rem;
-
+    @apply flex-center mr-4;
 }
 
+main .hero-wrapper {
+    @apply phone:pt-[315px] phone:px-5 phone:pb-[240px];
+}
 
+.hero img {
+    @apply phone:w-[75px];
+}
 
-@media (max-width: 767.98px) {
-
-    main .hero-wrapper {
-        padding: 315px 20px 240px;
-    }
-    .hero img {
-        width: 75px;
-
-    }
-    .hero h1 {
-        font-size: 30px;
-    }
+.hero h1 {
+    @apply text-3xl;
 }

@@ -17,3 +17,7 @@
 .blog > div p {
   @apply text-base;
 }
+
+.blog > div > p {
+  @apply m-6;
+}

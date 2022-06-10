@@ -1,89 +1,62 @@
 header {
-  display: none;
-  background-color: transparent;
+  @apply hidden;
 }
 
 .header-container  {
-  width: 100%;
-  height: 156px;
-  position: absolute;
-  padding-top: 15px;
-  padding-bottom: 17px;
-  overflow: hidden;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @apply w-full h-[156px] absolute py-4 overflow-hidden bg-50% bg-cover bg-no-repeat;
 }
 
-.header-wrapper {
-  height: 100%;
-}
-
-.header {
-  height: 100%;
-}
-
-.header  div {
-  height: 100%;
-  display: flex;
-}
-
-/* .header > div:nth-child(2) {
-} */
-
-
+.header-wrapper,
+.header,
 .header img {
-  width: 100%;
-  height: 100%;
+  @apply h-full;
+}
+
+.header div {
+  @apply w-full;
+}
+
+.header img,
+.header  {
+  @apply w-full;
 }
 
 .header > div > div > p {
-  width: 100%;
-  margin: 0;
+  @apply w-full m-0;
 }
 
 .header > div > div:first-child {
-  width: 115px;
-  margin-right: 2rem;
+  @apply w-[115px] m-8;
 }
 
 .header > div {
-  display: flex;
-  align-items: center;
+  @apply flex items-center;
 }
 
 .header .button-container {
-  display: flex;
-  align-items: center;
-  color: white !important;
+  @apply flex items-center text-white !important;
 }
 
 .header .button-container .button {
-  color: white;
+  @apply text-white;
 }
 
 .header .button-container .button:hover {
-  color: rgb(54, 90, 139);
+  @apply text-ez-aem-blue;
 }
 
 .header ul {
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-
+  @apply flex gap-x-10 items-center;
 }
 .header li::marker {
+  @apply flex items-start;
   content: '';
-  display: flex;
-  align-items: center;
 }
 
 .header a {
-  color: white;
-
+  @apply text-white;
 }
 
 .header a:hover {
-  text-decoration: none;
-  color: rgb(54, 90, 139);
+  @apply no-underline text-ez-aem-blue;
 }

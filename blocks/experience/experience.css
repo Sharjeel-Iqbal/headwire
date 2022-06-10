@@ -7,32 +7,26 @@
 }
 
 .experience > div {
-  @apply w-full flex justify-center items-center font-raleway;
-  color: #777;
+  @apply w-full flex-center font-raleway text-[#777];
 }
 
 .experience img {
-  width: 100%;
+  @apply w-full;
 
 }
 
 .experience > div > div {
-  margin-right: 2rem;
+  @apply mr-8;
 }
 
 .experience h2 {
-  font-size: 36px;
-  font-weight: 400;
+  @apply text-4xl font-normal;
 }
 
 .experience p  {
-
-  font-size: 16px;
-
+  @apply text-base mb-4;
 }
 
-@media (max-width: 767.98px) {
-  .experience picture {
-    display: none;
-  }
+.experience picture {
+  @apply tablet:hidden;
 }
