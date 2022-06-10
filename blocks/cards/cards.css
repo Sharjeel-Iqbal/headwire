@@ -24,7 +24,9 @@
   margin: initial;
 }
 
-
+.cards picture {
+  @apply flex-center;
+}
 
 .cards {
   @apply flex text-center justify-evenly phone:flex-col;
